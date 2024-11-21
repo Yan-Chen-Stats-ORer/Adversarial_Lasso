@@ -42,7 +42,7 @@ lambdas_PI = np.linspace(0.1,5.0,10)
 
 error_dict, prob_error_dict = initialize_storage()
 
-for i in range(1):
+for i in range(50):
     random.seed(i)
     #############################################################
     """generate samples"""

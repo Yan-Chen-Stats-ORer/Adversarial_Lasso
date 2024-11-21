@@ -17,7 +17,14 @@ from concurrent.futures import ProcessPoolExecutor
 import warnings
 
 import cvxpy as cp
-import coptpy
+import mosek
+
+# Define a callback function or create an environment
+with mosek.Env() as env:
+    with env.Task() as task:
+        # Set the maximum number of iterations
+        task.putintparam(mosek.iparam.intpnt_max_iterations, 5000)  
+
 
 # Set MOSEK solver parameters
 

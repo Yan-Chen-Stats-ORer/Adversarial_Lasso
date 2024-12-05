@@ -46,7 +46,12 @@ for i in range(50):
     random.seed(i)
     #############################################################
     """generate samples"""
-    X = sample_X(N)
+    X_original = sample_X(N)
+    
+    ##################### only keep those X that are within h distance of x #####################
+    X = X_original[np.abs(X_original - x) <= h]
+    N = len(X)
+    
     rho = draw_rho_general(X,support_r0)
     #generate marginal at all X 
     alpha = compute_alpha_vectorized(X, theta) 

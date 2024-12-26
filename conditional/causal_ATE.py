@@ -12,10 +12,6 @@ from functions import *
 from utils import *
 from causal_util import *
 
-"""
-Estimate r_0(x) at a given x.
-"""
-
 #set parameters 
 parser = argparse.ArgumentParser(description="Localized Lasso Conditional Case Illustration")
 parser.add_argument("--N",default=100,help="sample size")
@@ -74,7 +70,7 @@ for i in range(1, 2**M):
 AIPW_results = {estimator: {i: [] for i in range(1, 2**M)} for estimator in estimators}
 
 # Set the target number of results
-target_results = 100
+target_results = 200
 
 # Initialize iteration counter
 j = 0

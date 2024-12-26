@@ -300,8 +300,7 @@ while True:
     j += 1  # Increment iteration counter
 
 
-# plot the results for replications
-# plot_ate_confidence_intervals(AIPW_results, estimators, ATE_real,s, M, N, n=target_results)
+
 
 
 

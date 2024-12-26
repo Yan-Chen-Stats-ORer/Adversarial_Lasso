@@ -133,13 +133,15 @@ while True:
         Y_train_half = Y_halves[train_half_index]
         N_train = len(X_train_half)
         N_test = len(X_test_half)
+
+        # Unique values in the testing half
+        X_unique = np.unique(X_test_half)
     
         # data_dicts = {f"{estimator}_{metric}": {x: [] for x in X_unique} for estimator in estimators for metric in metrics}
         prob_dicts = {f"{estimator}_propensity_treat_est": {i: {x: [] for x in X_unique} for i in range(1, 2**M)} for estimator in estimators}
         control_dicts = {f"{estimator}_propensity_control_est": {x: [] for x in X_unique} for estimator in estimators}
         
-        # Unique values in the testing half
-        X_unique = np.unique(X_test_half)
+        
 
         """Fit propensity score"""
         ######### multinomial discrete choice modeling #########

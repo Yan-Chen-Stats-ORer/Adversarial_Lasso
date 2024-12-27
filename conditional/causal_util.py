@@ -94,7 +94,7 @@ def semiparametric_efficient_CI(probability,N,M,
 #compute coverage 
 def coverage_compute(AIPW_results,estimators,ATE_real,true_prob,M=4,N=200,T=100,
                      X_0=np.array([0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0])):
-    CI_width = semiparametric_efficient_CI(true_prob,N*0.5,M,X_0)
+    CI_width = semiparametric_efficient_CI(true_prob,N,M,X_0)
     coverage = {estimator: {t: [] for t in range(1, 2**M)} for estimator in estimators}
     
     for estimator in estimators:

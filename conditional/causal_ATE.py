@@ -23,7 +23,7 @@ N = int(args.N)
 M = int(args.M) 
 s = int(args.s)
 p = 2**M - M - 1 #dimension of generalized correlation coefficient 
-h = (np.log(p)/N)**(0.2)# Bandwidth
+h = (M/N)**(0.2)# Bandwidth
 print('bandwidth',h)
 
 # Estimate r_0 for specific values of x

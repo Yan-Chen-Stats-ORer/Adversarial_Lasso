@@ -23,7 +23,7 @@ N = int(args.N)
 M = int(args.M) 
 s = int(args.s)
 p = 2**M - M - 1 #dimension of generalized correlation coefficient 
-h = (M/N)**(0.2)# Bandwidth
+h = 0.5(M/N)**(0.2)# Bandwidth
 print('bandwidth',h)
 
 # Estimate r_0 for specific values of x
@@ -293,7 +293,7 @@ while True:
         for level in range(1, 2**M)
     )
     if all_completed:
-        break  # Stop the loop once all keys have 50 results
+        break  # Stop the loop once all keys have 200 results
 
     j += 1  # Increment iteration counter
 

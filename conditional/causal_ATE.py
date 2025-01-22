@@ -14,7 +14,7 @@ from causal_util import *
 
 #set parameters 
 parser = argparse.ArgumentParser(description="Localized Lasso Conditional Case Illustration")
-parser.add_argument("--N",default=100,help="sample size")
+parser.add_argument("--N",default=400,help="sample size")
 parser.add_argument("--M",default=4,help="binary vector dimension")
 parser.add_argument("--s",default=2,help="cardinality of the support of r_0")
 args = parser.parse_args()
